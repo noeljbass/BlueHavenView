@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,10 +40,13 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <style>
-        * { font-family: 'Inter', system-ui, sans-serif; }
-        
+        * {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
         .hero-gradient {
             background: linear-gradient(135deg, #0a1628 0%, #1e3a5f 40%, #1d4ed8 100%);
         }
@@ -72,13 +76,27 @@
         }
 
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+            }
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .float-animation {
@@ -86,8 +104,15 @@
         }
 
         @keyframes count-up {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .animate-in {
@@ -104,8 +129,15 @@
         }
 
         @keyframes drop-fall {
-            0% { transform: translateY(-100%) scale(1); opacity: 1; }
-            100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+            0% {
+                transform: translateY(-100%) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
         }
 
         .scroll-reveal {
@@ -184,10 +216,22 @@
         }
 
         /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a1628; }
-        ::-webkit-scrollbar-thumb { background: #1d4ed8; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a1628;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1d4ed8;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
 
         .percentage-ring {
             position: relative;
@@ -203,8 +247,13 @@
         }
 
         @keyframes ring-rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .mobile-menu-open {
@@ -225,6 +274,7 @@
         }
     </style>
 </head>
+
 <body class="bg-white text-gray-900 overflow-x-hidden">
 
     <!-- Navigation -->
@@ -233,11 +283,13 @@
             <div class="flex items-center justify-between h-16 lg:h-20">
                 <!-- Logo -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-haven-500 to-haven-700 flex items-center justify-center shadow-lg group-hover:shadow-haven-500/40 transition-shadow duration-300">
-                        <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            <line x1="12" y1="3" x2="12" y2="21"/>
-                            <line x1="3" y1="12" x2="21" y2="12"/>
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-haven-500 to-haven-700 flex items-center justify-center shadow-lg group-hover:shadow-haven-500/40 transition-shadow duration-300">
+                        <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <line x1="12" y1="3" x2="12" y2="21" />
+                            <line x1="3" y1="12" x2="21" y2="12" />
                         </svg>
                     </div>
                     <div>
@@ -248,34 +300,52 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center gap-1">
-                    <a href="#ministry" class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Ministry</a>
-                    <a href="#impact" class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Our Impact</a>
-                    <a href="#services" class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Windows</a>
-                    <a href="#why-us" class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Why Us</a>
-                    <a href="#testimonials" class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Reviews</a>
-                    <a href="#contact" class="ml-4 btn-primary text-white px-6 py-2.5 rounded-xl text-sm font-semibold inline-flex items-center gap-2">
+                    <a href="#ministry"
+                        class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Ministry</a>
+                    <a href="#impact"
+                        class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Our
+                        Impact</a>
+                    <a href="#services"
+                        class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Windows</a>
+                    <a href="#why-us"
+                        class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Why
+                        Us</a>
+                    <a href="#testimonials"
+                        class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Reviews</a>
+                    <a href="#contact"
+                        class="ml-4 btn-primary text-white px-6 py-2.5 rounded-xl text-sm font-semibold inline-flex items-center gap-2">
                         Get Free Quote
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
+                <button id="mobile-menu-btn"
+                    class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
                     <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 nav-blur border-t border-white/10 transform -translate-y-4 opacity-0 transition-all duration-300 pointer-events-none">
+        <div id="mobile-menu"
+            class="lg:hidden absolute top-full left-0 right-0 nav-blur border-t border-white/10 transform -translate-y-4 opacity-0 transition-all duration-300 pointer-events-none">
             <div class="px-4 py-6 space-y-1">
-                <a href="#ministry" class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Ministry</a>
-                <a href="#impact" class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Our Impact</a>
-                <a href="#services" class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Windows</a>
-                <a href="#why-us" class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Why Us</a>
-                <a href="#testimonials" class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Reviews</a>
+                <a href="#ministry"
+                    class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Ministry</a>
+                <a href="#impact"
+                    class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Our
+                    Impact</a>
+                <a href="#services"
+                    class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Windows</a>
+                <a href="#why-us"
+                    class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Why
+                    Us</a>
+                <a href="#testimonials"
+                    class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Reviews</a>
                 <div class="pt-4">
-                    <a href="#contact" class="mobile-link btn-primary text-white px-6 py-3 rounded-xl text-base font-semibold inline-flex items-center gap-2 w-full justify-center">
+                    <a href="#contact"
+                        class="mobile-link btn-primary text-white px-6 py-3 rounded-xl text-base font-semibold inline-flex items-center gap-2 w-full justify-center">
                         Get Free Quote
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
@@ -289,8 +359,11 @@
         <!-- Animated background elements -->
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute top-20 left-10 w-72 h-72 bg-haven-500/10 rounded-full blur-3xl float-animation"></div>
-            <div class="absolute bottom-20 right-10 w-96 h-96 bg-haven-400/8 rounded-full blur-3xl float-animation" style="animation-delay: -3s;"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-haven-600/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-haven-400/8 rounded-full blur-3xl float-animation"
+                style="animation-delay: -3s;"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-haven-600/5 rounded-full blur-3xl">
+            </div>
             <!-- Water drops -->
             <div class="water-drop" style="left: 10%; animation-duration: 8s; animation-delay: 0s;"></div>
             <div class="water-drop" style="left: 25%; animation-duration: 12s; animation-delay: 2s;"></div>
@@ -304,12 +377,6 @@
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <!-- Left Content -->
                 <div class="text-center lg:text-left">
-                    <!-- Ministry Badge -->
-                    <div class="inline-flex items-center gap-2 bg-haven-500/20 border border-haven-400/30 rounded-full px-4 py-2 mb-6">
-                        <div class="w-2 h-2 bg-haven-400 rounded-full animate-pulse"></div>
-                        <span class="text-haven-300 text-sm font-semibold tracking-wide">17% OF EARNINGS GIVE BACK</span>
-                    </div>
-
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] mb-6">
                         Better Windows.
                         <br>
@@ -317,16 +384,19 @@
                     </h1>
 
                     <p class="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-                        We don't just install windows — we're here to create lasting impact both locally and globally. Every window we install helps bring clean water, education, and hope to underserved communities.
+                        We don't just install windows; we're here to create lasting impact both locally and globally.
+                        Every window we install helps bring clean water, education, and hope to underserved communities.
                     </p>
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
-                        <a href="#contact" class="btn-primary text-white px-8 py-4 rounded-2xl text-base font-bold inline-flex items-center justify-center gap-2">
+                        <a href="#contact"
+                            class="btn-primary text-white px-8 py-4 rounded-2xl text-base font-bold inline-flex items-center justify-center gap-2">
                             Get Your Free Quote
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
-                        <a href="#ministry" class="btn-outline text-white px-8 py-4 rounded-2xl text-base font-bold inline-flex items-center justify-center gap-2">
+                        <a href="#ministry"
+                            class="btn-outline text-white px-8 py-4 rounded-2xl text-base font-bold inline-flex items-center justify-center gap-2">
                             <i data-lucide="heart" class="w-5 h-5"></i>
                             See Our Mission
                         </a>
@@ -350,97 +420,46 @@
                 </div>
 
                 <!-- Right Visual -->
-                <div class="relative hidden lg:block">
-                    <div class="relative">
-                        <!-- Main Image Card -->
-                        <div class="glass-card rounded-3xl overflow-hidden shadow-2xl">
-                            <img src="http://static.photos/nature/640x360/42" alt="Clean water well project" class="w-full h-80 object-cover">
-                            <div class="p-6">
-                                <div class="flex items-center gap-3 mb-3">
-                                    <div class="w-10 h-10 rounded-xl bg-haven-500/20 flex items-center justify-center">
-                                        <i data-lucide="droplets" class="w-5 h-5 text-haven-400"></i>
-                                    </div>
-                                    <div>
-                                        <div class="text-white font-semibold text-sm">Clean Water Initiative</div>
-                                        <div class="text-haven-300 text-xs">India & Underserved Regions</div>
-                                    </div>
-                                </div>
-                                <div class="w-full bg-haven-900/50 rounded-full h-2">
-                                    <div class="bg-gradient-to-r from-haven-400 to-haven-600 h-2 rounded-full" style="width: 17%"></div>
-                                </div>
-                                <div class="flex justify-between mt-2">
-                                    <span class="text-haven-300 text-xs font-semibold">17% of all earnings</span>
-                                    <span class="text-haven-300 text-xs">Dedicated</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Floating Impact Card -->
-                        <div class="absolute -top-6 -right-6 glass-card rounded-2xl p-4 shadow-xl float-animation">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-haven-400 to-haven-600 flex items-center justify-center stat-pulse">
-                                    <i data-lucide="heart-handshake" class="w-6 h-6 text-white"></i>
-                                </div>
-                                <div>
-                                    <div class="text-white font-bold text-lg">Ministry</div>
-                                    <div class="text-haven-300 text-xs">Giving Back Daily</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Floating Location Card -->
-                        <div class="absolute -bottom-4 -left-4 glass-card rounded-2xl p-4 shadow-xl float-animation" style="animation-delay: -2s;">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
-                                    <i data-lucide="map-pin" class="w-5 h-5 text-white"></i>
-                                </div>
-                                <div>
-                                    <div class="text-white font-bold text-sm">Franklin, TN</div>
-                                    <div class="text-gray-400 text-xs">Local & Global Impact</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- <div class="hidden lg:block">
+                    <img src="https://placehold.co/640x480/e2e8f0/475569?text=Future+Logo" alt="Future logo placeholder"
+                        class="w-full max-w-xl h-auto mx-auto">
+                </div> -->
             </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-            <span class="text-gray-400 text-xs font-medium tracking-wider uppercase">Discover More</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-haven-400"></i>
         </div>
     </section>
 
     <!-- Ministry Section -->
     <section id="ministry" class="relative py-20 lg:py-32 bg-white overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-haven-50 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+        <div
+            class="absolute top-0 right-0 w-96 h-96 bg-haven-50 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl">
+        </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="text-center mb-16 scroll-reveal">
-                <div class="inline-flex items-center gap-2 bg-haven-50 border border-haven-100 rounded-full px-4 py-2 mb-4">
-                    <i data-lucide="heart" class="w-4 h-4 text-haven-500"></i>
-                    <span class="text-haven-700 text-sm font-semibold">Our Ministry & Mission</span>
-                </div>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4">
                     Windows That Change Lives
                 </h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    17% of every dollar earned goes directly to ministries providing clean water, education, and hope to communities in need around the world.
+                    17% of every dollar earned goes directly to ministries providing clean water, education, and hope to
+                    communities in need around the world.
                 </p>
             </div>
 
             <!-- Ministry Impact Grid -->
             <div class="grid md:grid-cols-3 gap-8 mb-16">
                 <!-- Clean Water -->
-                <div class="impact-card scroll-reveal bg-gradient-to-br from-haven-900 to-haven-800 rounded-3xl p-8 text-white relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-40 h-40 bg-haven-500/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
+                <div
+                    class="impact-card scroll-reveal bg-gradient-to-br from-haven-900 to-haven-800 rounded-3xl p-8 text-white relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-40 h-40 bg-haven-500/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700">
+                    </div>
                     <div class="relative z-10">
                         <div class="w-14 h-14 rounded-2xl bg-haven-500/20 flex items-center justify-center mb-6">
                             <i data-lucide="droplets" class="w-7 h-7 text-haven-400"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3">Clean Water Wells</h3>
                         <p class="text-gray-300 leading-relaxed text-sm">
-                            Providing clean, life-saving water to communities that have never had access. Each well serves hundreds of people and transforms entire villages.
+                            Providing clean, life-saving water to communities that have never had access. Each well
+                            serves hundreds of people and transforms entire villages.
                         </p>
                         <div class="mt-6 pt-6 border-t border-white/10">
                             <div class="flex items-center gap-2">
@@ -452,15 +471,19 @@
                 </div>
 
                 <!-- Community Development -->
-                <div class="impact-card scroll-reveal bg-gradient-to-br from-haven-900 to-haven-800 rounded-3xl p-8 text-white relative overflow-hidden group" style="transition-delay: 0.1s;">
-                    <div class="absolute top-0 right-0 w-40 h-40 bg-haven-500/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
+                <div class="impact-card scroll-reveal bg-gradient-to-br from-haven-900 to-haven-800 rounded-3xl p-8 text-white relative overflow-hidden group"
+                    style="transition-delay: 0.1s;">
+                    <div
+                        class="absolute top-0 right-0 w-40 h-40 bg-haven-500/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700">
+                    </div>
                     <div class="relative z-10">
                         <div class="w-14 h-14 rounded-2xl bg-haven-500/20 flex items-center justify-center mb-6">
                             <i data-lucide="users" class="w-7 h-7 text-haven-400"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3">Community Development</h3>
                         <p class="text-gray-300 leading-relaxed text-sm">
-                            Supporting education, health, and opportunity through sustainable programs that empower communities to build brighter futures for themselves.
+                            Supporting education, health, and opportunity through sustainable programs that empower
+                            communities to build brighter futures for themselves.
                         </p>
                         <div class="mt-6 pt-6 border-t border-white/10">
                             <div class="flex items-center gap-2">
@@ -472,15 +495,19 @@
                 </div>
 
                 <!-- Life-Changing Initiatives -->
-                <div class="impact-card scroll-reveal bg-gradient-to-br from-haven-900 to-haven-800 rounded-3xl p-8 text-white relative overflow-hidden group" style="transition-delay: 0.2s;">
-                    <div class="absolute top-0 right-0 w-40 h-40 bg-haven-500/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
+                <div class="impact-card scroll-reveal bg-gradient-to-br from-haven-900 to-haven-800 rounded-3xl p-8 text-white relative overflow-hidden group"
+                    style="transition-delay: 0.2s;">
+                    <div
+                        class="absolute top-0 right-0 w-40 h-40 bg-haven-500/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700">
+                    </div>
                     <div class="relative z-10">
                         <div class="w-14 h-14 rounded-2xl bg-haven-500/20 flex items-center justify-center mb-6">
                             <i data-lucide="sparkles" class="w-7 h-7 text-haven-400"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3">Life-Changing Initiatives</h3>
                         <p class="text-gray-300 leading-relaxed text-sm">
-                            Going beyond basic needs to create lasting transformation. From vocational training to healthcare access, we invest in people's potential.
+                            Going beyond basic needs to create lasting transformation. From vocational training to
+                            healthcare access, we invest in people's potential.
                         </p>
                         <div class="mt-6 pt-6 border-t border-white/10">
                             <div class="flex items-center gap-2">
@@ -494,11 +521,13 @@
 
             <!-- 17% Statement -->
             <div class="scroll-reveal">
-                <div class="bg-gradient-to-r from-haven-50 via-blue-50 to-haven-50 rounded-3xl p-8 lg:p-12 border border-haven-100">
+                <div
+                    class="bg-gradient-to-r from-haven-50 via-blue-50 to-haven-50 rounded-3xl p-8 lg:p-12 border border-haven-100">
                     <div class="grid lg:grid-cols-2 gap-8 items-center">
                         <div>
                             <div class="flex items-center gap-4 mb-6">
-                                <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-haven-500 to-haven-700 flex items-center justify-center shadow-lg stat-pulse">
+                                <div
+                                    class="w-20 h-20 rounded-2xl bg-gradient-to-br from-haven-500 to-haven-700 flex items-center justify-center shadow-lg stat-pulse">
                                     <span class="text-white text-3xl font-black">17%</span>
                                 </div>
                                 <div>
@@ -507,7 +536,9 @@
                                 </div>
                             </div>
                             <p class="text-gray-600 leading-relaxed">
-                                When you choose Blue Haven Windows, you're not just upgrading your home — you're helping fund clean water wells in India, supporting community development programs, and creating opportunities that change lives forever. Every installation makes a difference.
+                                When you choose Blue Haven Windows, you're not just upgrading your home; you're helping
+                                fund clean water wells in India, supporting community development programs, and creating
+                                opportunities that change lives forever. Every installation makes a difference.
                             </p>
                         </div>
                         <div class="grid grid-cols-2 gap-4">
@@ -552,18 +583,22 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div class="space-y-4">
                             <div class="rounded-2xl overflow-hidden image-overlay">
-                                <img src="http://static.photos/people/320x240/10" alt="Community impact" class="w-full h-48 object-cover">
+                                <img src="http://static.photos/people/320x240/10" alt="Community impact"
+                                    class="w-full h-48 object-cover">
                             </div>
                             <div class="rounded-2xl overflow-hidden image-overlay">
-                                <img src="http://static.photos/nature/320x240/55" alt="Water well project" class="w-full h-64 object-cover">
+                                <img src="http://static.photos/nature/320x240/55" alt="Water well project"
+                                    class="w-full h-64 object-cover">
                             </div>
                         </div>
                         <div class="space-y-4 pt-8">
                             <div class="rounded-2xl overflow-hidden image-overlay">
-                                <img src="http://static.photos/education/320x240/22" alt="Education support" class="w-full h-64 object-cover">
+                                <img src="http://static.photos/education/320x240/22" alt="Education support"
+                                    class="w-full h-64 object-cover">
                             </div>
                             <div class="rounded-2xl overflow-hidden image-overlay">
-                                <img src="http://static.photos/travel/320x240/77" alt="India initiative" class="w-full h-48 object-cover">
+                                <img src="http://static.photos/travel/320x240/77" alt="India initiative"
+                                    class="w-full h-48 object-cover">
                             </div>
                         </div>
                     </div>
@@ -571,7 +606,8 @@
 
                 <!-- Content -->
                 <div class="scroll-reveal order-1 lg:order-2 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-haven-500/20 border border-haven-400/30 rounded-full px-4 py-2 mb-4">
+                    <div
+                        class="inline-flex items-center gap-2 bg-haven-500/20 border border-haven-400/30 rounded-full px-4 py-2 mb-4">
                         <i data-lucide="globe" class="w-4 h-4 text-haven-400"></i>
                         <span class="text-haven-300 text-sm font-semibold">Global Impact</span>
                     </div>
@@ -580,41 +616,50 @@
                         <span class="text-gradient">The Ends of the Earth</span>
                     </h2>
                     <p class="text-lg text-gray-300 leading-relaxed mb-8">
-                        Based in Franklin, Tennessee, our reach extends far beyond middle Tennessee. Through our ministry partnerships, we're bringing clean water, education, and hope to communities in India and underserved regions around the world.
+                        Based in Franklin, Tennessee, our reach extends far beyond middle Tennessee. Through our
+                        ministry partnerships, we're bringing clean water, education, and hope to communities in India
+                        and underserved regions around the world.
                     </p>
 
                     <!-- Impact List -->
                     <div class="space-y-4 mb-8">
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-haven-500/20 flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-haven-500/20 flex items-center justify-center flex-shrink-0">
                                 <i data-lucide="droplets" class="w-5 h-5 text-haven-400"></i>
                             </div>
                             <div>
                                 <h4 class="text-white font-semibold">Clean Water Wells</h4>
-                                <p class="text-gray-400 text-sm">Life-saving water access for villages that have never had clean water</p>
+                                <p class="text-gray-400 text-sm">Life-saving water access for villages that have never
+                                    had clean water</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-haven-500/20 flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-haven-500/20 flex items-center justify-center flex-shrink-0">
                                 <i data-lucide="school" class="w-5 h-5 text-haven-400"></i>
                             </div>
                             <div>
                                 <h4 class="text-white font-semibold">Education Programs</h4>
-                                <p class="text-gray-400 text-sm">Schools, supplies, and vocational training that open doors to the future</p>
+                                <p class="text-gray-400 text-sm">Schools, supplies, and vocational training that open
+                                    doors to the future</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-haven-500/20 flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-haven-500/20 flex items-center justify-center flex-shrink-0">
                                 <i data-lucide="stethoscope" class="w-5 h-5 text-haven-400"></i>
                             </div>
                             <div>
                                 <h4 class="text-white font-semibold">Health Initiatives</h4>
-                                <p class="text-gray-400 text-sm">Medical care and health education that saves and transforms lives</p>
+                                <p class="text-gray-400 text-sm">Medical care and health education that saves and
+                                    transforms lives</p>
                             </div>
                         </div>
                     </div>
 
-                    <a href="#contact" class="btn-primary text-white px-8 py-4 rounded-2xl text-base font-bold inline-flex items-center gap-2">
+                    <a href="#contact"
+                        class="btn-primary text-white px-8 py-4 rounded-2xl text-base font-bold inline-flex items-center gap-2">
                         Join Our Mission
                         <i data-lucide="arrow-right" class="w-5 h-5"></i>
                     </a>
@@ -627,7 +672,8 @@
     <section id="services" class="py-20 lg:py-32 bg-gray-50 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 scroll-reveal">
-                <div class="inline-flex items-center gap-2 bg-haven-50 border border-haven-100 rounded-full px-4 py-2 mb-4">
+                <div
+                    class="inline-flex items-center gap-2 bg-haven-50 border border-haven-100 rounded-full px-4 py-2 mb-4">
                     <i data-lucide="layers" class="w-4 h-4 text-haven-500"></i>
                     <span class="text-haven-700 text-sm font-semibold">Our Window Solutions</span>
                 </div>
@@ -635,7 +681,8 @@
                     Top-Tier Window Solutions
                 </h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Elevating your home's comfort, efficiency, and long-term value — without making quality feel out of reach.
+                    Elevating your home's comfort, efficiency, and long-term value; without making quality feel out of
+                    reach.
                 </p>
             </div>
 
@@ -647,7 +694,8 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Window Installation</h3>
                     <p class="text-gray-600 leading-relaxed text-sm mb-4">
-                        Professional installation of premium windows that enhance your home's beauty, comfort, and energy efficiency from day one.
+                        Professional installation of premium windows that enhance your home's beauty, comfort, and
+                        energy efficiency from day one.
                     </p>
                     <div class="flex items-center gap-2 text-haven-600 font-semibold text-sm">
                         <span>Learn More</span>
@@ -656,13 +704,15 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="service-card scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100" style="transition-delay: 0.1s;">
+                <div class="service-card scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100"
+                    style="transition-delay: 0.1s;">
                     <div class="w-14 h-14 rounded-2xl bg-haven-50 flex items-center justify-center mb-6">
                         <i data-lucide="refresh-cw" class="w-7 h-7 text-haven-600"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Window Replacement</h3>
                     <p class="text-gray-600 leading-relaxed text-sm mb-4">
-                        Upgrade your existing windows with modern, energy-efficient options that reduce utility costs and boost home value.
+                        Upgrade your existing windows with modern, energy-efficient options that reduce utility costs
+                        and boost home value.
                     </p>
                     <div class="flex items-center gap-2 text-haven-600 font-semibold text-sm">
                         <span>Learn More</span>
@@ -671,13 +721,15 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="service-card scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100" style="transition-delay: 0.2s;">
+                <div class="service-card scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100"
+                    style="transition-delay: 0.2s;">
                     <div class="w-14 h-14 rounded-2xl bg-haven-50 flex items-center justify-center mb-6">
                         <i data-lucide="zap" class="w-7 h-7 text-haven-600"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Energy Efficiency</h3>
                     <p class="text-gray-600 leading-relaxed text-sm mb-4">
-                        Advanced window technology that keeps your home comfortable year-round while significantly lowering energy bills.
+                        Advanced window technology that keeps your home comfortable year-round while significantly
+                        lowering energy bills.
                     </p>
                     <div class="flex items-center gap-2 text-haven-600 font-semibold text-sm">
                         <span>Learn More</span>
@@ -692,7 +744,8 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Premium Warranty</h3>
                     <p class="text-gray-600 leading-relaxed text-sm mb-4">
-                        Industry-leading warranties that protect your investment and give you peace of mind for decades to come.
+                        Industry-leading warranties that protect your investment and give you peace of mind for decades
+                        to come.
                     </p>
                     <div class="flex items-center gap-2 text-haven-600 font-semibold text-sm">
                         <span>Learn More</span>
@@ -701,13 +754,15 @@
                 </div>
 
                 <!-- Service 5 -->
-                <div class="service-card scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100" style="transition-delay: 0.1s;">
+                <div class="service-card scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100"
+                    style="transition-delay: 0.1s;">
                     <div class="w-14 h-14 rounded-2xl bg-haven-50 flex items-center justify-center mb-6">
                         <i data-lucide="paintbrush" class="w-7 h-7 text-haven-600"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Custom Design</h3>
                     <p class="text-gray-600 leading-relaxed text-sm mb-4">
-                        Tailored window solutions designed to complement your home's unique architecture and your personal style.
+                        Tailored window solutions designed to complement your home's unique architecture and your
+                        personal style.
                     </p>
                     <div class="flex items-center gap-2 text-haven-600 font-semibold text-sm">
                         <span>Learn More</span>
@@ -716,13 +771,15 @@
                 </div>
 
                 <!-- Service 6 -->
-                <div class="service-card scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100" style="transition-delay: 0.2s;">
+                <div class="service-card scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100"
+                    style="transition-delay: 0.2s;">
                     <div class="w-14 h-14 rounded-2xl bg-haven-50 flex items-center justify-center mb-6">
                         <i data-lucide="wrench" class="w-7 h-7 text-haven-600"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Service</h3>
                     <p class="text-gray-600 leading-relaxed text-sm mb-4">
-                        Skilled, professional teams that treat your home with respect and deliver flawless results on every project.
+                        Skilled, professional teams that treat your home with respect and deliver flawless results on
+                        every project.
                     </p>
                     <div class="flex items-center gap-2 text-haven-600 font-semibold text-sm">
                         <span>Learn More</span>
@@ -739,7 +796,8 @@
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                 <!-- Content -->
                 <div class="scroll-reveal">
-                    <div class="inline-flex items-center gap-2 bg-haven-50 border border-haven-100 rounded-full px-4 py-2 mb-4">
+                    <div
+                        class="inline-flex items-center gap-2 bg-haven-50 border border-haven-100 rounded-full px-4 py-2 mb-4">
                         <i data-lucide="award" class="w-4 h-4 text-haven-500"></i>
                         <span class="text-haven-700 text-sm font-semibold">Why Blue Haven</span>
                     </div>
@@ -748,44 +806,53 @@
                         <span class="text-gradient">Doesn't Feel Out of Reach</span>
                     </h2>
                     <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                        Our mission is to deliver top-tier window solutions that elevate your home's comfort, efficiency, and long-term value — all while making a global impact through every installation.
+                        Our mission is to deliver top-tier window solutions that elevate your home's comfort,
+                        efficiency, and long-term value; all while making a global impact through every installation.
                     </p>
 
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-haven-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <div
+                                class="w-8 h-8 rounded-full bg-haven-500 flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <i data-lucide="check" class="w-4 h-4 text-white"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900">Premium Quality, Fair Pricing</h4>
-                                <p class="text-gray-600 text-sm">The best windows shouldn't be exclusive. We make quality accessible.</p>
+                                <p class="text-gray-600 text-sm">The best windows shouldn't be exclusive. We make
+                                    quality accessible.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-haven-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <div
+                                class="w-8 h-8 rounded-full bg-haven-500 flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <i data-lucide="check" class="w-4 h-4 text-white"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900">Locally Owned, Community Driven</h4>
-                                <p class="text-gray-600 text-sm">Proudly based in Franklin, TN with deep roots in our community.</p>
+                                <p class="text-gray-600 text-sm">Proudly based in Franklin, TN with deep roots in our
+                                    community.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-haven-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <div
+                                class="w-8 h-8 rounded-full bg-haven-500 flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <i data-lucide="check" class="w-4 h-4 text-white"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900">Every Purchase Gives Back</h4>
-                                <p class="text-gray-600 text-sm">17% of earnings fund clean water, education, and life-changing initiatives.</p>
+                                <p class="text-gray-600 text-sm">17% of earnings fund clean water, education, and
+                                    life-changing initiatives.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 rounded-full bg-haven-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <div
+                                class="w-8 h-8 rounded-full bg-haven-500 flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <i data-lucide="check" class="w-4 h-4 text-white"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900">Expert Installation Guaranteed</h4>
-                                <p class="text-gray-600 text-sm">Professional teams that deliver perfection on every single project.</p>
+                                <p class="text-gray-600 text-sm">Professional teams that deliver perfection on every
+                                    single project.</p>
                             </div>
                         </div>
                     </div>
@@ -795,7 +862,8 @@
                 <div class="scroll-reveal">
                     <div class="relative">
                         <div class="rounded-3xl overflow-hidden image-overlay shadow-2xl">
-                            <img src="http://static.photos/construction/640x360/15" alt="Blue Haven window installation" class="w-full h-96 object-cover">
+                            <img src="http://static.photos/construction/640x360/15" alt="Blue Haven window installation"
+                                class="w-full h-96 object-cover">
                         </div>
                         <!-- Stats overlay -->
                         <div class="absolute bottom-6 left-6 right-6 z-10 glass-card rounded-2xl p-5">
@@ -824,7 +892,8 @@
     <section id="testimonials" class="py-20 lg:py-32 bg-gray-50 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 scroll-reveal">
-                <div class="inline-flex items-center gap-2 bg-haven-50 border border-haven-100 rounded-full px-4 py-2 mb-4">
+                <div
+                    class="inline-flex items-center gap-2 bg-haven-50 border border-haven-100 rounded-full px-4 py-2 mb-4">
                     <i data-lucide="message-circle" class="w-4 h-4 text-haven-500"></i>
                     <span class="text-haven-700 text-sm font-semibold">Testimonials</span>
                 </div>
@@ -852,7 +921,9 @@
                         <span class="text-haven-700 font-bold text-lg">SM</span>
                     </div>
                     <p class="text-gray-600 leading-relaxed mb-6 text-sm">
-                        "We chose Blue Haven not just for the quality windows, but because of their mission. Knowing that our purchase helped fund clean water wells made the investment even more meaningful. And the windows? Absolutely gorgeous."
+                        "We chose Blue Haven not just for the quality windows, but because of their mission. Knowing
+                        that our purchase helped fund clean water wells made the investment even more meaningful. And
+                        the windows? Absolutely gorgeous."
                     </p>
                     <div>
                         <div class="font-bold text-gray-900">Sarah M.</div>
@@ -861,7 +932,8 @@
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100 relative" style="transition-delay: 0.1s;">
+                <div class="scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100 relative"
+                    style="transition-delay: 0.1s;">
                     <div class="absolute top-6 right-8">
                         <div class="flex gap-1">
                             <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
@@ -875,7 +947,8 @@
                         <span class="text-haven-700 font-bold text-lg">JR</span>
                     </div>
                     <p class="text-gray-600 leading-relaxed mb-6 text-sm">
-                        "The installation team was incredibly professional and respectful of our home. Our energy bills dropped noticeably the very first month. Blue Haven delivers on every promise — and then some."
+                        "The installation team was incredibly professional and respectful of our home. Our energy bills
+                        dropped noticeably the very first month. Blue Haven delivers on every promise; and then some."
                     </p>
                     <div>
                         <div class="font-bold text-gray-900">James R.</div>
@@ -884,7 +957,8 @@
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100 relative" style="transition-delay: 0.2s;">
+                <div class="scroll-reveal bg-white rounded-3xl p-8 shadow-sm border border-gray-100 relative"
+                    style="transition-delay: 0.2s;">
                     <div class="absolute top-6 right-8">
                         <div class="flex gap-1">
                             <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
@@ -898,7 +972,8 @@
                         <span class="text-haven-700 font-bold text-lg">LP</span>
                     </div>
                     <p class="text-gray-600 leading-relaxed mb-6 text-sm">
-                        "When I learned that 17% of their earnings go to ministry work, I was all in. It's rare to find a company that truly puts its money where its heart is. Blue Haven is the real deal."
+                        "When I learned that 17% of their earnings go to ministry work, I was all in. It's rare to find
+                        a company that truly puts its money where its heart is. Blue Haven is the real deal."
                     </p>
                     <div>
                         <div class="font-bold text-gray-900">Lisa P.</div>
@@ -912,12 +987,15 @@
     <!-- CTA / Mission Statement Section -->
     <section class="ministry-gradient relative py-20 lg:py-28 overflow-hidden">
         <div class="absolute inset-0">
-            <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50"></div>
+            <div
+                class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50">
+            </div>
         </div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
             <div class="scroll-reveal">
-                <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-6">
+                <div
+                    class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-6">
                     <i data-lucide="heart" class="w-4 h-4 text-white"></i>
                     <span class="text-white text-sm font-semibold">Our Promise</span>
                 </div>
@@ -926,14 +1004,17 @@
                     <span class="text-gradient-gold">We Create Lasting Impact.</span>
                 </h2>
                 <p class="text-xl text-blue-100 leading-relaxed mb-10 max-w-2xl mx-auto">
-                    Every window we install carries a promise — better comfort for your home and a better life for someone across the globe. That's the Blue Haven difference.
+                    Every window we install carries a promise; better comfort for your home and a better life for
+                    someone across the globe. That's the Blue Haven difference.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#contact" class="bg-white text-haven-700 px-8 py-4 rounded-2xl text-base font-bold inline-flex items-center justify-center gap-2 hover:bg-gray-100 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                    <a href="#contact"
+                        class="bg-white text-haven-700 px-8 py-4 rounded-2xl text-base font-bold inline-flex items-center justify-center gap-2 hover:bg-gray-100 hover:-translate-y-1 transition-all duration-300 shadow-xl">
                         Get Your Free Quote
                         <i data-lucide="arrow-right" class="w-5 h-5"></i>
                     </a>
-                    <a href="https://bluehavenview.com" target="_blank" class="btn-outline text-white px-8 py-4 rounded-2xl text-base font-bold inline-flex items-center justify-center gap-2">
+                    <a href="https://bluehavenview.com" target="_blank"
+                        class="btn-outline text-white px-8 py-4 rounded-2xl text-base font-bold inline-flex items-center justify-center gap-2">
                         <i data-lucide="external-link" class="w-5 h-5"></i>
                         Visit Full Website
                     </a>
@@ -948,7 +1029,8 @@
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
                 <!-- Left Info -->
                 <div class="scroll-reveal">
-                    <div class="inline-flex items-center gap-2 bg-haven-50 border border-haven-100 rounded-full px-4 py-2 mb-4">
+                    <div
+                        class="inline-flex items-center gap-2 bg-haven-50 border border-haven-100 rounded-full px-4 py-2 mb-4">
                         <i data-lucide="phone" class="w-4 h-4 text-haven-500"></i>
                         <span class="text-haven-700 text-sm font-semibold">Get In Touch</span>
                     </div>
@@ -957,12 +1039,14 @@
                         <span class="text-gradient">Better Windows?</span>
                     </h2>
                     <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                        Get your free, no-obligation quote today. Discover how Blue Haven can transform your home and help change lives around the world.
+                        Get your free, no-obligation quote today. Discover how Blue Haven can transform your home and
+                        help change lives around the world.
                     </p>
 
                     <div class="space-y-6 mb-8">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-haven-50 flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-haven-50 flex items-center justify-center flex-shrink-0">
                                 <i data-lucide="map-pin" class="w-6 h-6 text-haven-600"></i>
                             </div>
                             <div>
@@ -971,7 +1055,8 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-haven-50 flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-haven-50 flex items-center justify-center flex-shrink-0">
                                 <i data-lucide="mail" class="w-6 h-6 text-haven-600"></i>
                             </div>
                             <div>
@@ -980,11 +1065,13 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-haven-50 flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-haven-50 flex items-center justify-center flex-shrink-0">
                                 <i data-lucide="globe" class="w-6 h-6 text-haven-600"></i>
                             </div>
                             <div>
-                                <a href="https://bluehavenview.com" target="_blank" class="font-semibold text-haven-600 hover:text-haven-700 transition-colors">bluehavenview.com</a>
+                                <a href="https://bluehavenview.com" target="_blank"
+                                    class="font-semibold text-haven-600 hover:text-haven-700 transition-colors">bluehavenview.com</a>
                                 <div class="text-gray-500 text-sm">Visit our full website</div>
                             </div>
                         </div>
@@ -992,11 +1079,13 @@
 
                     <!-- Trust Badges -->
                     <div class="flex flex-wrap gap-3">
-                        <div class="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2">
+                        <div
+                            class="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2">
                             <i data-lucide="shield-check" class="w-4 h-4 text-green-600"></i>
                             <span class="text-green-700 text-sm font-semibold">Licensed & Insured</span>
                         </div>
-                        <div class="inline-flex items-center gap-2 bg-haven-50 border border-haven-200 rounded-full px-4 py-2">
+                        <div
+                            class="inline-flex items-center gap-2 bg-haven-50 border border-haven-200 rounded-full px-4 py-2">
                             <i data-lucide="heart" class="w-4 h-4 text-haven-600"></i>
                             <span class="text-haven-700 text-sm font-semibold">17% Gives Back</span>
                         </div>
@@ -1013,24 +1102,35 @@
                             <div class="grid sm:grid-cols-2 gap-5">
                                 <div>
                                     <label class="block text-sm font-semibold text-gray-700 mb-2">First Name</label>
-                                    <input type="text" placeholder="John" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm" required>
+                                    <input type="text" placeholder="John"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm"
+                                        required>
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold text-gray-700 mb-2">Last Name</label>
-                                    <input type="text" placeholder="Smith" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm" required>
+                                    <input type="text" placeholder="Smith"
+                                        class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm"
+                                        required>
                                 </div>
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
-                                <input type="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm" required>
+                                <input type="email" placeholder="john@example.com"
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm"
+                                    required>
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
-                                <input type="tel" placeholder="(615) 555-0123" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm" required>
+                                <input type="tel" placeholder="(615) 555-0123"
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm"
+                                    required>
                             </div>
                             <div>
-                                <label class="block text-sm font-semibold text-gray-700 mb-2">What can we help you with?</label>
-                                <select class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm text-gray-700" required>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">What can we help you
+                                    with?</label>
+                                <select
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm text-gray-700"
+                                    required>
                                     <option value="">Select a service...</option>
                                     <option>New Window Installation</option>
                                     <option>Window Replacement</option>
@@ -1041,19 +1141,23 @@
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-gray-700 mb-2">Message (Optional)</label>
-                                <textarea rows="3" placeholder="Tell us about your project..." class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm resize-none"></textarea>
+                                <textarea rows="3" placeholder="Tell us about your project..."
+                                    class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-haven-500 focus:border-haven-500 outline-none transition-all text-sm resize-none"></textarea>
                             </div>
-                            <button type="submit" class="btn-primary w-full text-white px-8 py-4 rounded-xl text-base font-bold inline-flex items-center justify-center gap-2">
+                            <button type="submit"
+                                class="btn-primary w-full text-white px-8 py-4 rounded-xl text-base font-bold inline-flex items-center justify-center gap-2">
                                 Send My Quote Request
                                 <i data-lucide="send" class="w-5 h-5"></i>
                             </button>
                             <p class="text-xs text-gray-400 text-center">
-                                By submitting, you agree to be contacted about window solutions. We respect your privacy.
+                                By submitting, you agree to be contacted about window solutions. We respect your
+                                privacy.
                             </p>
                         </div>
 
                         <!-- Success Message (hidden by default) -->
-                        <div id="form-success" class="hidden mt-6 bg-green-50 border border-green-200 rounded-xl p-4 text-center">
+                        <div id="form-success"
+                            class="hidden mt-6 bg-green-50 border border-green-200 rounded-xl p-4 text-center">
                             <i data-lucide="check-circle" class="w-8 h-8 text-green-500 mx-auto mb-2"></i>
                             <h4 class="font-bold text-green-800">Quote Request Sent!</h4>
                             <p class="text-green-600 text-sm">We'll be in touch shortly. Thank you!</p>
@@ -1066,18 +1170,22 @@
 
     <!-- Footer -->
     <footer class="bg-haven-950 text-white relative overflow-hidden">
-        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-haven-500/50 to-transparent"></div>
-        
+        <div
+            class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-haven-500/50 to-transparent">
+        </div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
                 <!-- Brand -->
                 <div class="sm:col-span-2 lg:col-span-1">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-haven-500 to-haven-700 flex items-center justify-center">
-                            <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <line x1="12" y1="3" x2="12" y2="21"/>
-                                <line x1="3" y1="12" x2="21" y2="12"/>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-haven-500 to-haven-700 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <line x1="12" y1="3" x2="12" y2="21" />
+                                <line x1="3" y1="12" x2="21" y2="12" />
                             </svg>
                         </div>
                         <div>
@@ -1086,9 +1194,11 @@
                         </div>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        Premium window solutions with purpose. Based in Franklin, TN, serving Middle Tennessee and making global impact.
+                        Premium window solutions with purpose. Based in Franklin, TN, serving Middle Tennessee and
+                        making global impact.
                     </p>
-                    <div class="inline-flex items-center gap-2 bg-haven-500/20 border border-haven-500/30 rounded-full px-3 py-1.5">
+                    <div
+                        class="inline-flex items-center gap-2 bg-haven-500/20 border border-haven-500/30 rounded-full px-3 py-1.5">
                         <i data-lucide="heart" class="w-3 h-3 text-haven-400"></i>
                         <span class="text-haven-300 text-xs font-semibold">17% Gives Back</span>
                     </div>
@@ -1098,11 +1208,16 @@
                 <div>
                     <h4 class="font-bold text-white mb-4">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="#ministry" class="text-gray-400 hover:text-white text-sm transition-colors">Our Ministry</a></li>
-                        <li><a href="#impact" class="text-gray-400 hover:text-white text-sm transition-colors">Global Impact</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Window Services</a></li>
-                        <li><a href="#why-us" class="text-gray-400 hover:text-white text-sm transition-colors">Why Blue Haven</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white text-sm transition-colors">Free Quote</a></li>
+                        <li><a href="#ministry" class="text-gray-400 hover:text-white text-sm transition-colors">Our
+                                Ministry</a></li>
+                        <li><a href="#impact" class="text-gray-400 hover:text-white text-sm transition-colors">Global
+                                Impact</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Window
+                                Services</a></li>
+                        <li><a href="#why-us" class="text-gray-400 hover:text-white text-sm transition-colors">Why Blue
+                                Haven</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white text-sm transition-colors">Free
+                                Quote</a></li>
                     </ul>
                 </div>
 
@@ -1110,11 +1225,16 @@
                 <div>
                     <h4 class="font-bold text-white mb-4">Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Window Installation</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Window Replacement</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Energy Efficiency</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Custom Design</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Expert Service</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Window
+                                Installation</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Window
+                                Replacement</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Energy
+                                Efficiency</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Custom
+                                Design</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white text-sm transition-colors">Expert
+                                Service</a></li>
                     </ul>
                 </div>
 
@@ -1149,12 +1269,13 @@
             <!-- Bottom Bar -->
             <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div class="text-gray-500 text-sm text-center sm:text-left">
-                    &copy; 2024 Blue Haven Windows. All rights reserved. Franklin, TN
+                    &copy; 2026 Blue Haven Windows. All rights reserved. Franklin, TN
                 </div>
                 <div class="flex items-center gap-6">
-                    <a href="https://bluehavenview.com" target="_blank" class="text-gray-500 hover:text-white text-sm transition-colors">bluehavenview.com</a>
+                    <a href="https://bluehavenview.com" target="_blank"
+                        class="text-gray-500 hover:text-white text-sm transition-colors">bluehavenview.com</a>
                     <div class="flex items-center gap-1 text-gray-500 text-sm">
-                        Made with <i data-lucide="heart" class="w-3 h-3 text-haven-400 mx-1"></i> & Purpose
+                        Designed by <a href="https://bastiontech.org">BastionTech LLC</a>
                     </div>
                 </div>
             </div>
@@ -1162,7 +1283,8 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-haven-600 text-white shadow-lg flex items-center justify-center hover:bg-haven-500 transition-all duration-300 opacity-0 translate-y-4 pointer-events-none z-40">
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-haven-600 text-white shadow-lg flex items-center justify-center hover:bg-haven-500 transition-all duration-300 opacity-0 translate-y-4 pointer-events-none z-40">
         <i data-lucide="arrow-up" class="w-5 h-5"></i>
     </button>
 
@@ -1255,7 +1377,7 @@
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Simulate form submission
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
@@ -1309,4 +1431,5 @@
         }
     </script>
 </body>
+
 </html>
