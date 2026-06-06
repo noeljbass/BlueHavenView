@@ -145,6 +145,11 @@
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
         }
 
+        .nav-dropdown {
+            background: #0a1628;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
         .text-gradient {
             background: linear-gradient(135deg, #60a5fa, #3b82f6, #2563eb);
             -webkit-background-clip: text;
@@ -256,6 +261,97 @@
             border-radius: inherit;
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://bluehavenview.com/#business",
+          "name": "Blue Haven Windows",
+          "url": "https://bluehavenview.com/",
+          "image": "https://bluehavenview.com/logo.png",
+          "email": "info@bluehavenview.com",
+          "description": "Blue Haven Windows offers energy-efficient window replacement and professional window installation in Franklin and Middle Tennessee.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Franklin",
+            "addressRegion": "TN",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Franklin, TN"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Middle Tennessee"
+            }
+          ],
+          "knowsAbout": [
+            "Window replacement",
+            "Window installation",
+            "Energy efficient windows",
+            "Custom window styles",
+            "Replacement window ROI",
+            "Lifetime warranty windows"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://bluehavenview.com/#website",
+          "url": "https://bluehavenview.com/",
+          "name": "Blue Haven Windows",
+          "publisher": {
+            "@id": "https://bluehavenview.com/#business"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://bluehavenview.com/#webpage",
+          "url": "https://bluehavenview.com/",
+          "name": "Blue Haven Windows | Window Replacement & Installation in Franklin, TN",
+          "description": "Blue Haven Windows offers energy-efficient window replacement and professional window installation in Franklin and Middle Tennessee. Get a free quote today.",
+          "isPartOf": {
+            "@id": "https://bluehavenview.com/#website"
+          },
+          "about": {
+            "@id": "https://bluehavenview.com/#business"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://bluehavenview.com/herobackground.jpg"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://bluehavenview.com/#window-services",
+          "name": "Window Replacement and Installation",
+          "serviceType": "Window replacement and installation",
+          "description": "Energy-efficient window replacement, professional window installation, and custom window solutions for Franklin and Middle Tennessee homeowners.",
+          "provider": {
+            "@id": "https://bluehavenview.com/#business"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Franklin, TN"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Middle Tennessee"
+            }
+          ],
+          "offers": {
+            "@type": "Offer",
+            "name": "Free window quote",
+            "url": "https://bluehavenview.com/#contact"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body class="bg-white text-gray-900 overflow-x-hidden">
@@ -287,7 +383,7 @@
                             <i data-lucide="chevron-down" class="w-4 h-4"></i>
                         </a>
                         <div class="absolute left-0 top-full pt-3 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <div class="glass-card rounded-2xl p-3 shadow-2xl">
+                            <div class="nav-dropdown rounded-2xl p-3 shadow-2xl">
                                 <a href="window-replacement.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Window Replacement</a>
                                 <a href="energy-efficient-windows.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Energy Efficient Windows</a>
                                 <a href="window-installation.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Window Installation</a>
