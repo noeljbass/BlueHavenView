@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Replacement Franklin TN | Blue Haven Windows</title>
+    <meta name="description" content="Window replacement Franklin TN homeowners trust for old, drafty, foggy, damaged, or inefficient windows. Explore full-service replacement windows and request a free quote." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        haven: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e3a5f', 900: '#0f2440', 950: '#0a1628' },
+                        gold: { 400: '#facc15', 500: '#eab308', 600: '#ca8a04' }
+                    },
+                    fontFamily: { heading: ['"Inter"', 'system-ui', 'sans-serif'], body: ['"Inter"', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0a1628 0%, #1e3a5f 40%, #1d4ed8 100%);
+        }
+
+        .ministry-gradient {
+            background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
+        }
+
+        .water-gradient {
+            background: linear-gradient(180deg, #0f2440 0%, #1e3a5f 50%, #2563eb 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .stat-pulse {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes count-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: count-up 0.8s ease-out forwards;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-blur {
+            background: rgba(10, 22, 40, 0.85);
+            backdrop-filter: blur(16px);
+        }
+
+        .nav-blur-scrolled {
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #60a5fa, #3b82f6, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #facc15, #eab308);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            border-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .impact-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .impact-card:hover {
+            transform: scale(1.03);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a1628;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1d4ed8;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+
+        .percentage-ring {
+            position: relative;
+        }
+
+        .percentage-ring::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: conic-gradient(#3b82f6 0deg, #3b82f6 61.2deg, rgba(59, 130, 246, 0.15) 61.2deg, rgba(59, 130, 246, 0.15) 360deg);
+            animation: ring-rotate 4s linear infinite;
+        }
+
+        @keyframes ring-rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .mobile-menu-open {
+            transform: translateX(0) !important;
+            opacity: 1 !important;
+        }
+
+        .image-overlay {
+            position: relative;
+        }
+
+        .image-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(10, 22, 40, 0.8) 100%);
+            border-radius: inherit;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-blur transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="logo.png" alt="Blue Haven Windows logo" class="h-10 w-auto object-contain drop-shadow-lg group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.6)] transition-all duration-300" />
+                    <div><span class="text-white font-bold text-lg tracking-tight">Blue Haven</span><span class="hidden sm:block text-haven-300 text-xs font-medium -mt-1">Windows & Impact</span></div>
+                </a>
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="index.html#ministry" class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Ministry</a>
+                    <a href="index.html#impact" class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Our Impact</a>
+                    <div class="relative group">
+                        <a href="index.html#services" class="text-white px-4 py-2 text-sm font-medium rounded-lg bg-white/5 transition-all duration-300 inline-flex items-center gap-1">Windows <i data-lucide="chevron-down" class="w-4 h-4"></i></a>
+                        <div class="absolute left-0 top-full pt-3 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="glass-card rounded-2xl p-3 shadow-2xl"><a href="window-replacement.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Window Replacement</a><a href="energy-efficient-windows.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Energy Efficient Windows</a><a href="window-installation.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Window Installation</a><a href="replacement-window-roi.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Window ROI</a><a href="custom-window-styles.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Custom Window Styles</a><a href="lifetime-warranty-windows.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Lifetime Warranty</a></div>
+                        </div>
+                    </div>
+                    <a href="index.html#why-us" class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Why Us</a>
+                    <a href="index.html#testimonials" class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Reviews</a>
+                    <a href="funnel.html" class="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-300">Free Guide</a>
+                    <a href="index.html#contact" class="ml-4 btn-primary text-white px-6 py-2.5 rounded-xl text-sm font-semibold inline-flex items-center gap-2">Get Free Quote <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"><i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="lg:hidden absolute top-full left-0 right-0 nav-blur border-t border-white/10 transform -translate-y-4 opacity-0 transition-all duration-300 pointer-events-none">
+            <div class="px-4 py-6 space-y-1">
+                <a href="index.html#ministry" class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Ministry</a>
+                <a href="index.html#impact" class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Our Impact</a>
+                <a href="index.html#services" class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Windows</a>
+                <div class="border-l border-white/10 ml-4 space-y-1"><a href="window-replacement.html" class="mobile-link block text-gray-400 hover:text-white px-8 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all">Window Replacement</a><a href="energy-efficient-windows.html" class="mobile-link block text-gray-400 hover:text-white px-8 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all">Energy Efficient Windows</a><a href="window-installation.html" class="mobile-link block text-gray-400 hover:text-white px-8 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all">Window Installation</a><a href="replacement-window-roi.html" class="mobile-link block text-gray-400 hover:text-white px-8 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all">Window ROI</a><a href="custom-window-styles.html" class="mobile-link block text-gray-400 hover:text-white px-8 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all">Custom Window Styles</a><a href="lifetime-warranty-windows.html" class="mobile-link block text-gray-400 hover:text-white px-8 py-2 text-sm font-medium rounded-lg hover:bg-white/5 transition-all">Lifetime Warranty</a></div>
+                <a href="index.html#why-us" class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Why Us</a>
+                <a href="index.html#testimonials" class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Reviews</a>
+                <a href="funnel.html" class="mobile-link block text-gray-300 hover:text-white px-4 py-3 text-base font-medium rounded-lg hover:bg-white/5 transition-all">Free Guide</a>
+                <div class="pt-4"><a href="index.html#contact" class="mobile-link btn-primary text-white px-6 py-3 rounded-xl text-base font-semibold inline-flex items-center gap-2 w-full justify-center">Get Free Quote <i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(rgba(10, 22, 40, 0.80), rgba(10, 22, 40, 0.82)), url('herobackground.jpg');">
+            <div class="absolute inset-0 overflow-hidden"><div class="absolute top-20 left-10 w-72 h-72 bg-haven-500/10 rounded-full blur-3xl float-animation"></div><div class="absolute bottom-10 right-10 w-96 h-96 bg-haven-400/8 rounded-full blur-3xl float-animation" style="animation-delay:-3s;"></div></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="max-w-4xl text-center mx-auto scroll-reveal">
+                    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-2 mb-6"><i data-lucide="sparkles" class="w-4 h-4 text-haven-300"></i><span class="text-haven-100 text-sm font-semibold">Full-Service Home Window Replacement</span></div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">Window Replacement Franklin TN Homeowners Can Feel Good About</h1>
+                    <p class="text-lg sm:text-xl text-gray-200 leading-relaxed mb-8">If you are searching for window replacement Franklin TN homeowners can rely on, Blue Haven Windows helps you replace old, drafty, foggy, damaged, or inefficient windows with premium vinyl replacement windows built for comfort, curb appeal, and long-term performance.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="index.html#contact" class="btn-primary text-white px-8 py-4 rounded-xl font-bold inline-flex items-center justify-center gap-2">Get Free Quote <i data-lucide="arrow-right" class="w-5 h-5"></i></a><a href="index.html#services" class="btn-outline text-white px-8 py-4 rounded-xl font-bold inline-flex items-center justify-center gap-2">Explore Services <i data-lucide="layers" class="w-5 h-5"></i></a></div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 lg:py-28 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"><div class="scroll-reveal"><div class="inline-flex items-center gap-2 bg-haven-50 border border-haven-100 rounded-full px-4 py-2 mb-4"><i data-lucide="map-pin" class="w-4 h-4 text-haven-500"></i><span class="text-haven-700 text-sm font-semibold">Franklin & Middle Tennessee</span></div><h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight">Full-Service Window Replacement Franklin TN Families Can Trust</h2><p class="text-lg text-gray-600 leading-relaxed mb-6">We guide you from the first walkthrough to the final cleanup, helping you choose the right windows for your home, budget, and goals. Whether your current windows are hard to open, showing seal failure, letting in drafts, or simply aging your exterior, our team makes home window replacement straightforward and respectful.</p><p class="text-gray-600 leading-relaxed">Homeowners searching for replacement windows near me or a window company Franklin TN can expect thoughtful recommendations, premium product options, and a process designed around your home—not pressure.</p></div><div class="scroll-reveal"><div class="glass-card-light rounded-3xl p-8 shadow-2xl border border-white"><h3 class="text-2xl font-black text-gray-900 mb-4">Related Window Services</h3><p class="text-gray-600 mb-6">Compare services that pair well with this project.</p><div class="flex flex-wrap gap-3"><a href="energy-efficient-windows.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-gray-100 text-haven-700 font-semibold text-sm hover:border-haven-200 hover:shadow-md transition-all">Energy Efficient Windows<i data-lucide="arrow-right" class="w-4 h-4"></i></a><a href="window-installation.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-gray-100 text-haven-700 font-semibold text-sm hover:border-haven-200 hover:shadow-md transition-all">Window Installation<i data-lucide="arrow-right" class="w-4 h-4"></i></a><a href="replacement-window-roi.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-gray-100 text-haven-700 font-semibold text-sm hover:border-haven-200 hover:shadow-md transition-all">Window ROI<i data-lucide="arrow-right" class="w-4 h-4"></i></a><a href="custom-window-styles.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-gray-100 text-haven-700 font-semibold text-sm hover:border-haven-200 hover:shadow-md transition-all">Custom Window Styles<i data-lucide="arrow-right" class="w-4 h-4"></i></a><a href="lifetime-warranty-windows.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-gray-100 text-haven-700 font-semibold text-sm hover:border-haven-200 hover:shadow-md transition-all">Lifetime Warranty<i data-lucide="arrow-right" class="w-4 h-4"></i></a></div></div></div></div></div></section>
+        <section class="py-20 lg:py-28 bg-gray-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-14 scroll-reveal"><h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Benefits for Your Home</h2><p class="text-lg text-gray-600 max-w-2xl mx-auto">Practical improvements for comfort, curb appeal, efficiency, and confidence.</p></div><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"><div class="service-card bg-white rounded-3xl p-6 shadow-sm border border-gray-100"><div class="w-11 h-11 rounded-2xl bg-haven-50 flex items-center justify-center mb-4"><i data-lucide="check" class="w-5 h-5 text-haven-600"></i></div><p class="text-gray-700 font-medium leading-relaxed">Replace drafty or damaged windows with modern vinyl replacement windows</p></div><div class="service-card bg-white rounded-3xl p-6 shadow-sm border border-gray-100"><div class="w-11 h-11 rounded-2xl bg-haven-50 flex items-center justify-center mb-4"><i data-lucide="check" class="w-5 h-5 text-haven-600"></i></div><p class="text-gray-700 font-medium leading-relaxed">Improve everyday comfort in hot, humid Middle Tennessee summers and cool winters</p></div><div class="service-card bg-white rounded-3xl p-6 shadow-sm border border-gray-100"><div class="w-11 h-11 rounded-2xl bg-haven-50 flex items-center justify-center mb-4"><i data-lucide="check" class="w-5 h-5 text-haven-600"></i></div><p class="text-gray-700 font-medium leading-relaxed">Refresh curb appeal with styles that fit your home architecture</p></div><div class="service-card bg-white rounded-3xl p-6 shadow-sm border border-gray-100"><div class="w-11 h-11 rounded-2xl bg-haven-50 flex items-center justify-center mb-4"><i data-lucide="check" class="w-5 h-5 text-haven-600"></i></div><p class="text-gray-700 font-medium leading-relaxed">Reduce maintenance with vinyl that resists fading and discoloration</p></div><div class="service-card bg-white rounded-3xl p-6 shadow-sm border border-gray-100"><div class="w-11 h-11 rounded-2xl bg-haven-50 flex items-center justify-center mb-4"><i data-lucide="check" class="w-5 h-5 text-haven-600"></i></div><p class="text-gray-700 font-medium leading-relaxed">Work with a local window company Franklin TN homeowners can call directly</p></div><div class="service-card bg-white rounded-3xl p-6 shadow-sm border border-gray-100"><div class="w-11 h-11 rounded-2xl bg-haven-50 flex items-center justify-center mb-4"><i data-lucide="check" class="w-5 h-5 text-haven-600"></i></div><p class="text-gray-700 font-medium leading-relaxed">Choose options for energy performance, style, and budget</p></div></div></div></section>
+        <section class="py-20 lg:py-28 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start"><div class="scroll-reveal"><div class="inline-flex items-center gap-2 bg-haven-50 border border-haven-100 rounded-full px-4 py-2 mb-4"><i data-lucide="settings" class="w-4 h-4 text-haven-500"></i><span class="text-haven-700 text-sm font-semibold">Product Features</span></div><h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-6">Premium Wincore 7700 Window Options</h2><p class="text-gray-600 leading-relaxed mb-6">Blue Haven Windows offers Wincore 7700 windows with performance and design options that can be matched to your goals. 7700 windows meet ENERGY STAR guidelines when ordered with Low-E/Argon-filled glass.</p><p class="text-gray-600 leading-relaxed">Double hung, slider, casement, picture, awning, bay, bow, garden, geometric, and patio door styles are available, along with grid, color, laminate, woodgrain, decorative glass, and hardware options.</p></div><div class="scroll-reveal"><ul class="space-y-4 text-gray-700 bg-gray-50 rounded-3xl p-8 border border-gray-100"><li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-haven-500 flex-shrink-0 mt-0.5"></i><span>Wincore 7700 windows</span></li><li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-haven-500 flex-shrink-0 mt-0.5"></i><span>Low-E glass and Argon gas filled insulating glass</span></li><li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-haven-500 flex-shrink-0 mt-0.5"></i><span>Optional triple-pane high performance glass with Krypton gas option</span></li><li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-haven-500 flex-shrink-0 mt-0.5"></i><span>Super Spacer system with warm-edge spacer technology</span></li><li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-haven-500 flex-shrink-0 mt-0.5"></i><span>Multi-chamber vinyl frames with welded sash and frame corners</span></li><li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-haven-500 flex-shrink-0 mt-0.5"></i><span>Multiple weatherseals to reduce drafts</span></li><li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-haven-500 flex-shrink-0 mt-0.5"></i><span>Sloped sill design to reduce water pooling</span></li><li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-haven-500 flex-shrink-0 mt-0.5"></i><span>Low-maintenance vinyl that resists fading and discoloration</span></li></ul></div></div></div></section>
+        <section class="py-20 lg:py-28 hero-gradient relative overflow-hidden"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative"><div class="text-center max-w-3xl mx-auto mb-12 scroll-reveal"><h2 class="text-3xl sm:text-4xl font-black text-white mb-4">Why Choose Blue Haven Windows</h2><p class="text-lg text-gray-300 leading-relaxed">We combine premium window solutions with a purpose-driven approach rooted in Franklin, Tennessee and committed to impact beyond the jobsite.</p></div><div class="grid md:grid-cols-3 gap-6"><div class="glass-card rounded-3xl p-8 scroll-reveal"><i data-lucide="home-heart" class="w-10 h-10 text-haven-300 mb-5"></i><h3 class="text-xl font-bold text-white mb-3">Homeowner-First Guidance</h3><p class="text-gray-300 leading-relaxed">Clear recommendations, no fake claims, and options based on what your home actually needs.</p></div><div class="glass-card rounded-3xl p-8 scroll-reveal" style="transition-delay:.1s"><i data-lucide="hammer" class="w-10 h-10 text-haven-300 mb-5"></i><h3 class="text-xl font-bold text-white mb-3">Professional Process</h3><p class="text-gray-300 leading-relaxed">From measurements to installation, our team focuses on fit, cleanliness, communication, and lasting performance.</p></div><div class="glass-card rounded-3xl p-8 scroll-reveal" style="transition-delay:.2s"><i data-lucide="heart" class="w-10 h-10 text-haven-300 mb-5"></i><h3 class="text-xl font-bold text-white mb-3">Purpose Beyond Windows</h3><p class="text-gray-300 leading-relaxed">Blue Haven preserves its ministry and impact mission while serving Middle Tennessee homeowners.</p></div></div></div></section>
+        <section class="py-20 lg:py-28 bg-gray-50"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12 scroll-reveal"><h2 class="text-3xl sm:text-4xl font-black text-gray-900 mb-4">Frequently Asked Questions</h2><p class="text-lg text-gray-600">Helpful answers before you request a quote.</p></div><div class="space-y-4 scroll-reveal"><details class="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"><summary class="cursor-pointer font-bold text-gray-900 text-lg">How do I know it is time to replace my windows?</summary><p class="text-gray-600 leading-relaxed mt-4">Common signs include drafts, foggy glass, difficult operation, rotting or damaged frames, water concerns, and rooms that never feel comfortable. We can inspect your openings and explain practical replacement options.</p></details><details class="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"><summary class="cursor-pointer font-bold text-gray-900 text-lg">Do you replace all windows at once?</summary><p class="text-gray-600 leading-relaxed mt-4">Many homeowners replace every window for a consistent look and performance, while others phase projects by room or priority. We can discuss both approaches during your quote.</p></details><details class="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"><summary class="cursor-pointer font-bold text-gray-900 text-lg">What types of replacement windows are available?</summary><p class="text-gray-600 leading-relaxed mt-4">Popular choices include double hung, slider, casement, picture, awning, bay, bow, garden, geometric, and patio door styles.</p></details><details class="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"><summary class="cursor-pointer font-bold text-gray-900 text-lg">Are your windows energy efficient?</summary><p class="text-gray-600 leading-relaxed mt-4">Wincore 7700 windows meet ENERGY STAR guidelines when ordered with Low-E/Argon-filled glass, and additional glass packages may be available for higher performance.</p></details><details class="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"><summary class="cursor-pointer font-bold text-gray-900 text-lg">Can replacement windows help curb appeal?</summary><p class="text-gray-600 leading-relaxed mt-4">Yes. New windows can update exterior lines, brighten rooms, and coordinate grids, colors, laminates, woodgrain finishes, and hardware with the rest of your home.</p></details></div></div></section>
+        <section class="py-20 lg:py-28 bg-white"><div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-reveal"><div class="rounded-3xl hero-gradient p-8 sm:p-12 lg:p-16 shadow-2xl"><h2 class="text-3xl sm:text-4xl font-black text-white mb-4">Ready to Talk About Your Windows?</h2><p class="text-lg text-gray-200 leading-relaxed mb-8">Schedule a free quote with Blue Haven Windows and get practical options for your Franklin or Middle Tennessee home.</p><div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="index.html#contact" class="bg-white text-haven-800 px-8 py-4 rounded-xl font-bold inline-flex items-center justify-center gap-2 hover:bg-haven-50 transition-colors">Request Free Quote <i data-lucide="arrow-right" class="w-5 h-5"></i></a><a href="index.html" class="btn-outline text-white px-8 py-4 rounded-xl font-bold inline-flex items-center justify-center gap-2">Back to Home <i data-lucide="home" class="w-5 h-5"></i></a></div></div></div></section>
+    </main>
+
+    <footer class="bg-haven-950 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-haven-500/50 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-4"><img src="logo.png" alt="Blue Haven Windows logo" class="h-10 w-auto object-contain" /><div><div class="font-bold text-lg">Blue Haven</div><div class="text-haven-400 text-xs">Better Windows. Better Life.</div></div></div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Premium window solutions with purpose. Based in Franklin, TN, serving Middle Tennessee and making global impact.</p>
+                    <div class="inline-flex items-center gap-2 bg-haven-500/20 border border-haven-500/30 rounded-full px-3 py-1.5"><i data-lucide="heart" class="w-3 h-3 text-haven-400"></i><span class="text-haven-300 text-xs font-semibold">17% Gives Back</span></div>
+                </div>
+                <div><h4 class="font-bold text-white mb-4">Quick Links</h4><ul class="space-y-3"><li><a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors">Home</a></li><li><a href="index.html#ministry" class="text-gray-400 hover:text-white text-sm transition-colors">Our Ministry</a></li><li><a href="index.html#impact" class="text-gray-400 hover:text-white text-sm transition-colors">Global Impact</a></li><li><a href="index.html#services" class="text-gray-400 hover:text-white text-sm transition-colors">Window Services</a></li><li><a href="index.html#contact" class="text-gray-400 hover:text-white text-sm transition-colors">Free Quote</a></li></ul></div>
+                <div><h4 class="font-bold text-white mb-4">Services</h4><ul class="space-y-3"><li><a href="window-replacement.html" class="text-gray-400 hover:text-white text-sm transition-colors">Window Replacement</a></li><li><a href="energy-efficient-windows.html" class="text-gray-400 hover:text-white text-sm transition-colors">Energy Efficient Windows</a></li><li><a href="window-installation.html" class="text-gray-400 hover:text-white text-sm transition-colors">Window Installation</a></li><li><a href="replacement-window-roi.html" class="text-gray-400 hover:text-white text-sm transition-colors">Window ROI</a></li><li><a href="custom-window-styles.html" class="text-gray-400 hover:text-white text-sm transition-colors">Custom Window Styles</a></li><li><a href="lifetime-warranty-windows.html" class="text-gray-400 hover:text-white text-sm transition-colors">Lifetime Warranty</a></li></ul></div>
+                <div><h4 class="font-bold text-white mb-4">Ministry Impact</h4><ul class="space-y-3"><li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="droplets" class="w-4 h-4 text-haven-400"></i>Clean Water Wells</li><li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="users" class="w-4 h-4 text-haven-400"></i>Community Development</li><li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="graduation-cap" class="w-4 h-4 text-haven-400"></i>Education Programs</li><li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="heart" class="w-4 h-4 text-haven-400"></i>India Initiatives</li><li class="flex items-center gap-2 text-gray-400 text-sm"><i data-lucide="globe" class="w-4 h-4 text-haven-400"></i>Underserved Regions</li></ul></div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"><div class="text-gray-500 text-sm text-center sm:text-left">&copy; 2026 Blue Haven Windows. All rights reserved. Franklin, TN</div><div class="flex items-center gap-6"><a href="https://bluehavenview.com" target="_blank" class="text-gray-500 hover:text-white text-sm transition-colors">bluehavenview.com</a><div class="flex items-center gap-1 text-gray-500 text-sm">Designed by <a href="https://bastiontech.org">BastionTech LLC</a></div></div></div>
+        </div>
+    </footer>
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-haven-600 hover:bg-haven-500 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 translate-y-4 pointer-events-none z-40"><i data-lucide="arrow-up" class="w-5 h-5"></i></button>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let menuOpen = false;
+        mobileMenuBtn.addEventListener('click', () => { menuOpen = !menuOpen; if (menuOpen) { mobileMenu.classList.add('mobile-menu-open'); mobileMenu.classList.remove('pointer-events-none'); document.getElementById('menu-icon').setAttribute('data-lucide', 'x'); } else { mobileMenu.classList.remove('mobile-menu-open'); mobileMenu.classList.add('pointer-events-none'); document.getElementById('menu-icon').setAttribute('data-lucide', 'menu'); } lucide.createIcons(); });
+        document.querySelectorAll('.mobile-link').forEach(link => { link.addEventListener('click', () => { menuOpen = false; mobileMenu.classList.remove('mobile-menu-open'); mobileMenu.classList.add('pointer-events-none'); document.getElementById('menu-icon').setAttribute('data-lucide', 'menu'); lucide.createIcons(); }); });
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => { if (window.scrollY > 50) { navbar.classList.add('nav-blur-scrolled'); navbar.classList.remove('nav-blur'); } else { navbar.classList.remove('nav-blur-scrolled'); navbar.classList.add('nav-blur'); } });
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => { if (window.scrollY > 600) { backToTop.classList.remove('opacity-0','translate-y-4','pointer-events-none'); backToTop.classList.add('opacity-100','translate-y-0'); } else { backToTop.classList.add('opacity-0','translate-y-4','pointer-events-none'); backToTop.classList.remove('opacity-100','translate-y-0'); } });
+        backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
