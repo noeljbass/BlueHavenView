@@ -8,6 +8,8 @@ const GUIDE_FILE = __DIR__ . '/WindowsBuyersGuide.pdf';
 const GUIDE_FILE_NAME = 'Blue-Haven-Windows-Buyers-Guide.pdf';
 const LEADS_CSV = __DIR__ . '/data/lead-submissions.csv';
 
+require_once __DIR__ . '/mailerlite.php';
+
 function wants_json(): bool
 {
     return str_contains($_SERVER['HTTP_ACCEPT'] ?? '', 'application/json') || strtolower($_SERVER['HTTP_X_REQUESTED_WITH'] ?? '') === 'xmlhttprequest';
@@ -63,6 +65,11 @@ function is_guide_request(string $formName, string $projectType, string $message
     return str_contains($haystack, 'guide') || str_contains($haystack, 'buyer');
 }
 
+function marketing_consent_granted(string $value): bool
+{
+    return in_array(strtolower(trim($value)), ['1', 'yes', 'true', 'on'], true);
+}
+
 function append_lead(array $lead): void
 {
     $dir = dirname(LEADS_CSV);
@@ -93,6 +100,8 @@ function append_lead(array $lead): void
                 'form_name',
                 'ip_address',
                 'user_agent',
+                'marketing_consent',
+                'mailerlite_status',
             ]);
         }
 
@@ -111,6 +120,8 @@ function append_lead(array $lead): void
             $lead['form_name'],
             $lead['ip_address'],
             $lead['user_agent'],
+            $lead['marketing_consent'] ?? '',
+            $lead['mailerlite_status'] ?? '',
         ]);
         fflush($handle);
         flock($handle, LOCK_UN);
@@ -224,6 +235,7 @@ $projectType = clean('project_type', 180);
 $pageTitle = clean('page_title', 180);
 $formName = clean('form_name', 180);
 $sourcePage = clean_url(clean('source_page', 500) ?: ($_SERVER['HTTP_REFERER'] ?? SITE_URL));
+$marketingConsent = marketing_consent_granted(clean('marketing_consent', 20));
 $name = trim($firstName . ' ' . $lastName);
 $isGuideRequest = is_guide_request($formName, $projectType, $message);
 
@@ -246,7 +258,7 @@ $subjectPage = $pageTitle !== '' ? $pageTitle : parse_url($sourcePage, PHP_URL_P
 $leadType = $isGuideRequest ? 'Free Guide Request' : 'Contact Request';
 $subject = 'Blue Haven Windows ' . strtolower($leadType) . ' from ' . $subjectPage;
 
-append_lead([
+$lead = [
     'submitted_at_iso' => $submittedAtIso,
     'lead_type' => $leadType,
     'first_name' => $firstName,
@@ -261,7 +273,16 @@ append_lead([
     'form_name' => $formName,
     'ip_address' => mb_substr((string)($_SERVER['REMOTE_ADDR'] ?? ''), 0, 80),
     'user_agent' => mb_substr((string)($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 300),
-]);
+    'marketing_consent' => $marketingConsent ? 'yes' : 'no',
+];
+$mailerliteResult = mailerlite_sync_lead($lead);
+$lead['mailerlite_status'] = mailerlite_result_message($mailerliteResult);
+
+if (($mailerliteResult['ok'] ?? false) !== true && !str_starts_with($lead['mailerlite_status'], 'skipped:')) {
+    error_log('MailerLite sync failed for ' . ($email !== '' ? $email : 'unknown email') . ': ' . $lead['mailerlite_status']);
+}
+
+append_lead($lead);
 
 $rows = [
     ['label' => 'Lead Type', 'value' => $leadType, 'html' => false],
@@ -274,6 +295,8 @@ $rows = [
     ['label' => 'Page Title', 'value' => $pageTitle !== '' ? $pageTitle : 'Not provided', 'html' => false],
     ['label' => 'Form', 'value' => $formName !== '' ? $formName : 'Website Contact Form', 'html' => false],
     ['label' => 'Submitted At', 'value' => $submittedAt, 'html' => false],
+    ['label' => 'Marketing Consent', 'value' => $marketingConsent ? 'Yes' : 'No', 'html' => false],
+    ['label' => 'MailerLite', 'value' => $lead['mailerlite_status'], 'html' => false],
 ];
 
 $htmlBody = '<!doctype html><html><body style="margin:0;background:#f8fafc;font-family:Arial,sans-serif;color:#0f172a;">'
@@ -286,7 +309,7 @@ $htmlBody = '<!doctype html><html><body style="margin:0;background:#f8fafc;font-
     . '<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;background:#fff;border:1px solid #e2e8f0;border-top:0;border-radius:0 0 18px 18px;border-collapse:separate;border-spacing:0;overflow:hidden;">'
     . build_rows($rows)
     . '</table>'
-    . '<p style="font-size:12px;color:#64748b;margin:18px 4px 0;">This submission was also recorded to the local lead CSV for backup and Mailchimp import. Reply directly to this email to contact the homeowner when an email address was provided.</p>'
+    . '<p style="font-size:12px;color:#64748b;margin:18px 4px 0;">This submission was also recorded to the local lead CSV for backup and MailerLite import. Reply directly to this email to contact the homeowner when an email address was provided.</p>'
     . '</div></body></html>';
 
 $textBody = "Blue Haven Windows {$leadType}\n\n"
@@ -299,6 +322,8 @@ $textBody = "Blue Haven Windows {$leadType}\n\n"
     . "Page Title: " . ($pageTitle !== '' ? $pageTitle : 'Not provided') . "\n"
     . "Form: " . ($formName !== '' ? $formName : 'Website Contact Form') . "\n"
     . "Submitted At: {$submittedAt}\n"
+    . "Marketing Consent: " . ($marketingConsent ? 'Yes' : 'No') . "\n"
+    . "MailerLite: {$lead['mailerlite_status']}\n"
     . "Lead CSV: data/lead-submissions.csv\n";
 
 $sent = send_owner_email($subject, $htmlBody, $textBody, $email, $name);
