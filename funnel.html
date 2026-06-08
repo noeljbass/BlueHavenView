@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#facc15">
     <title>Free Window Buyer's Guide | Blue Haven Windows Franklin TN</title>
     <meta name="description"
         content="Download the free Window Buyer's Guide from Blue Haven Windows. Learn what Franklin and Middle Tennessee homeowners should know before replacing windows." />
@@ -41,15 +42,17 @@
                         </div>
                     </div>
 
-                    <form class="bg-white text-slate-900 rounded-3xl p-6 lg:p-8 shadow-2xl border border-white/20">
+                    <form class="bg-white text-slate-900 rounded-3xl p-6 lg:p-8 shadow-2xl border border-white/20" data-contact-form="Free Window Buyer&#x27;s Guide | Blue Haven Windows Franklin TN" action="/contact.php" method="post">
+                        <input type="hidden" name="source_page" value="">
+                        <input type="text" name="website" value="" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
                         <p class="text-sm font-black text-blue-700 uppercase tracking-wide">Instant Access</p>
                         <h2 class="text-2xl lg:text-3xl font-extrabold mt-2">Send Me The Free Guide</h2>
                         <p class="text-slate-600 mt-2">Enter your information and we will send the guide right away.</p>
                         <div class="mt-5 space-y-3">
-                            <input class="w-full border border-slate-300 rounded-xl px-4 py-3" placeholder="First Name" required />
-                            <input class="w-full border border-slate-300 rounded-xl px-4 py-3" placeholder="Email" type="email" required />
-                            <input class="w-full border border-slate-300 rounded-xl px-4 py-3" placeholder="Phone (optional)" />
-                            <button type="button" class="w-full bg-blue-700 hover:bg-blue-600 text-white font-black py-4 rounded-xl">Download Buyer's Guide</button>
+                            <input class="w-full border border-slate-300 rounded-xl px-4 py-3" placeholder="First Name" required name="first_name" />
+                            <input class="w-full border border-slate-300 rounded-xl px-4 py-3" placeholder="Email" type="email" required name="email" />
+                            <input class="w-full border border-slate-300 rounded-xl px-4 py-3" placeholder="Phone (optional)" name="phone" />
+                            <button type="submit" class="w-full bg-blue-700 hover:bg-blue-600 text-white font-black py-4 rounded-xl">Download Buyer's Guide</button>
                         </div>
                         <div class="mt-5 bg-blue-50 border border-blue-100 rounded-2xl p-4">
                             <p class="text-sm text-slate-700"><strong>After submission:</strong> check your inbox for the guide, then request a free in-home consultation if you want Stephen to review your windows and answer questions.</p>
@@ -92,6 +95,7 @@
             </div>
         </section>
     </main>
+    <script src="/contact-form.js"></script>
 </body>
 
 </html>
