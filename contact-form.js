@@ -54,6 +54,27 @@
         }
     }
 
+
+    function addMailerLiteConsent(form) {
+        if (form.querySelector('[data-mailerlite-consent]')) return;
+
+        const submitButton = form.querySelector('button[type="submit"], button:not([type])');
+        const wrapper = document.createElement('label');
+        wrapper.setAttribute('data-mailerlite-consent', '');
+        wrapper.className = 'flex items-start gap-3 mt-4 mb-4 text-sm leading-relaxed text-slate-600 cursor-pointer';
+        wrapper.innerHTML = '<input type="hidden" name="marketing_consent" value="0"><input type="checkbox" name="marketing_consent" value="1" checked class="mt-1 h-4 w-4 rounded border-slate-300 text-blue-700 focus:ring-blue-600"><span>Sign up for our list to get monthly promotional deals.</span>';
+
+        if (submitButton) {
+            submitButton.insertAdjacentElement('beforebegin', wrapper);
+        } else {
+            form.appendChild(wrapper);
+        }
+    }
+
+    function initMailerLiteConsent() {
+        document.querySelectorAll('form[data-contact-form]').forEach(addMailerLiteConsent);
+    }
+
     async function submitContactForm(event) {
         const form = event.target.closest('form[data-contact-form]');
         if (!form) return;
@@ -111,6 +132,8 @@
         }
     }
 
+    initMailerLiteConsent();
+    document.addEventListener('DOMContentLoaded', initMailerLiteConsent);
     document.addEventListener('submit', submitContactForm, true);
 
     document.querySelectorAll('form[data-contact-form] input[name="source_page"]').forEach((input) => {
