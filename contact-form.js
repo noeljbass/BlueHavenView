@@ -92,7 +92,7 @@
             }
 
             form.reset();
-            showStatus(status, 'Thank you. Your request has been emailed to Stephen at Blue Haven Windows.', false);
+            showStatus(status, result.message || 'Thank you. Your request has been emailed to Stephen at Blue Haven Windows.', false);
             if (submitButton) {
                 submitButton.innerHTML = form.matches('[data-contact-form*="Guide"]') ? 'Guide Request Sent' : 'Request Sent';
             }
