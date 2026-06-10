@@ -10,7 +10,8 @@
         content="Blue Haven Windows offers energy-efficient window replacement and professional window installation in Franklin, Nashville, and Clarksville, Tennessee. Get a free quote today." />
     <meta name="keywords"
         content="window replacement Franklin TN, window installation Franklin Tennessee, energy efficient windows, replacement windows near me, custom windows Middle Tennessee" />
-
+	<meta property="og:image" content="https://bluehavenview.com/og-image.jpg" />
+    <meta name="twitter:image" content="https://bluehavenview.com/og-image.jpg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -1671,24 +1672,42 @@
             }, 1500);
         });
 
-        // Smooth scroll for anchor links
+         // Smooth scroll for anchor links, including tracked GBP links that may arrive as
+        // /#contact?utm_source=google... instead of the preferred /?utm_source=google...#contact.
+        function getAnchorTarget(anchorValue) {
+            if (!anchorValue || !anchorValue.startsWith('#')) return null;
+            const anchorId = decodeURIComponent(anchorValue.slice(1).split(/[?&]/)[0]);
+            if (!anchorId) return null;
+            return document.getElementById(anchorId);
+        }
+
+        function scrollToAnchorTarget(target, behavior = 'smooth') {
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior
+            });
+        }
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = getAnchorTarget(this.getAttribute('href'));
                 if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
+                    e.preventDefault();
+                    scrollToAnchorTarget(target);
                 }
             });
         });
 
+      window.addEventListener('load', () => {
+            const target = getAnchorTarget(window.location.hash);
+            if (target) {
+                scrollToAnchorTarget(target, 'auto');
+            }
+        });
+      
         // Animated counter for stats (simple version)
         function animateCounter(element, target, duration = 2000) {
             let start = 0;
