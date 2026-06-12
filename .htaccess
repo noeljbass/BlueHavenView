@@ -1,0 +1,12 @@
+# Force a single canonical host/protocol so Google does not see duplicate
+# http://, http://www., and https://www. versions of the same pages.
+RewriteEngine On
+
+# Redirect plain HTTP to HTTPS, while avoiding redirect loops behind proxies.
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://bluehavenview.com%{REQUEST_URI} [R=301,L]
+
+# Redirect www and any other host aliases to the canonical apex domain.
+RewriteCond %{HTTP_HOST} !^bluehavenview\.com$ [NC]
+RewriteRule ^ https://bluehavenview.com%{REQUEST_URI} [R=301,L]
