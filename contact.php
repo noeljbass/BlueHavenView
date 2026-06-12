@@ -15,6 +15,22 @@ function wants_json(): bool
     return str_contains($_SERVER['HTTP_ACCEPT'] ?? '', 'application/json') || strtolower($_SERVER['HTTP_X_REQUESTED_WITH'] ?? '') === 'xmlhttprequest';
 }
 
+
+function google_tag(): string
+{
+    return <<<'HTML'
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTEM34PS2J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WTEM34PS2J');
+</script>
+HTML;
+}
+
 function respond(bool $success, string $message, int $statusCode = 200): void
 {
     http_response_code($statusCode);
@@ -29,7 +45,7 @@ function respond(bool $success, string $message, int $statusCode = 200): void
     $heading = $success ? 'Thank you!' : 'Something went wrong';
     $safeHeading = htmlspecialchars($heading, ENT_QUOTES, 'UTF-8');
     $safeMessage = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
-    echo "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#facc15\"><title>{$safeHeading} | " . SITE_NAME . "</title></head><body style=\"font-family:Arial,sans-serif;max-width:720px;margin:48px auto;padding:0 20px;line-height:1.6\"><h1>{$safeHeading}</h1><p>{$safeMessage}</p><p><a href=\"/\">Return to " . SITE_NAME . "</a></p></body></html>";
+    echo "<!doctype html><html lang=\"en\"><head>" . google_tag() . "<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#facc15\"><title>{$safeHeading} | " . SITE_NAME . "</title></head><body style=\"font-family:Arial,sans-serif;max-width:720px;margin:48px auto;padding:0 20px;line-height:1.6\"><h1>{$safeHeading}</h1><p>{$safeMessage}</p><p><a href=\"/\">Return to " . SITE_NAME . "</a></p></body></html>";
     exit;
 }
 
