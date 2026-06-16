@@ -2,6 +2,14 @@
 # http://, http://www., and https://www. versions of the same pages.
 RewriteEngine On
 
+# Normalize duplicate slashes in crawlable page paths before canonical host checks.
+RewriteCond %{THE_REQUEST} \s/+(.+)//+([^\s?]*) [NC]
+RewriteRule ^ https://bluehavenview.com/%1/%2 [R=301,L,NE]
+
+# Redirect explicit index.html URLs to their directory canonical URLs.
+RewriteRule ^index\.html$ https://bluehavenview.com/ [R=301,L]
+RewriteRule ^(.+/)index\.html$ https://bluehavenview.com/$1 [R=301,L]
+
 # Redirect plain HTTP to HTTPS, while avoiding redirect loops behind proxies.
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} !=on
