@@ -31,6 +31,11 @@ function google_tag(): string
 HTML;
 }
 
+function chat_widget(): string
+{
+    return '<script src="https://bastiontech.org/widgets/chat-widget.js" data-client="blue-haven-windows"></script>';
+}
+
 function respond(bool $success, string $message, int $statusCode = 200): void
 {
     http_response_code($statusCode);
@@ -45,7 +50,7 @@ function respond(bool $success, string $message, int $statusCode = 200): void
     $heading = $success ? 'Thank you!' : 'Something went wrong';
     $safeHeading = htmlspecialchars($heading, ENT_QUOTES, 'UTF-8');
     $safeMessage = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
-    echo "<!doctype html><html lang=\"en\"><head>" . google_tag() . "<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#facc15\"><title>{$safeHeading} | " . SITE_NAME . "</title></head><body style=\"font-family:Arial,sans-serif;max-width:720px;margin:48px auto;padding:0 20px;line-height:1.6\"><h1>{$safeHeading}</h1><p>{$safeMessage}</p><p><a href=\"/\">Return to " . SITE_NAME . "</a></p></body></html>";
+    echo "<!doctype html><html lang=\"en\"><head>" . google_tag() . "<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta name=\"theme-color\" content=\"#facc15\"><title>{$safeHeading} | " . SITE_NAME . "</title></head><body style=\"font-family:Arial,sans-serif;max-width:720px;margin:48px auto;padding:0 20px;line-height:1.6\"><h1>{$safeHeading}</h1><p>{$safeMessage}</p><p><a href=\"/\">Return to " . SITE_NAME . "</a></p>" . chat_widget() . "</body></html>";
     exit;
 }
 
