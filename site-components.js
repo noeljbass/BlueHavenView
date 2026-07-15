@@ -13,12 +13,13 @@
   ];
   const serviceAreas = [
     ['All Service Areas', '/service-areas/'],
-    ['Franklin, TN', '/service-areas/franklin-tn.html'],
+    ['Franklin, TN', '/window-replacement.html'],
     ['Brentwood, TN', '/service-areas/brentwood-tn.html'],
     ['Nashville, TN', '/service-areas/nashville-tn.html'],
     ['Murfreesboro, TN', '/service-areas/murfreesboro-tn.html'],
     ['Spring Hill, TN', '/service-areas/spring-hill-tn.html'],
     ['Nolensville, TN', '/service-areas/nolensville-tn.html'],
+    ['Thompson\'s Station, TN', '/service-areas/thompsons-station-tn.html'],
     ['Columbia, TN', '/service-areas/columbia-tn.html'],
     ['Clarksville, TN', '/service-areas/clarksville-tn.html']
   ];
