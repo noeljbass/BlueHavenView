@@ -20,13 +20,13 @@ function google_tag(): string
 {
     return <<<'HTML'
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTEM34PS2J"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18254638708"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-WTEM34PS2J');
+  gtag('config', 'AW-18254638708');
 </script>
 HTML;
 }
