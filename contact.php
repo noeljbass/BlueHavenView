@@ -186,6 +186,49 @@ function send_owner_email(string $subject, string $htmlBody, string $textBody, s
     return mail(CONTACT_RECIPIENT, mb_encode_mimeheader($subject), $body, implode("\r\n", $headers));
 }
 
+function send_submission_confirmation(string $email, string $firstName): bool
+{
+    if ($email === '') {
+        return false;
+    }
+
+    $greeting = $firstName !== '' ? $firstName : 'there';
+    $subject = 'We received your request | ' . SITE_NAME;
+    $textBody = "Hi {$greeting},\n\nWe received your submission. We look forward to speaking with you soon.\n\nA member of the Blue Haven Windows team will review your request and follow up using the contact information you provided.\n\nIf you need immediate assistance, reply to this email or call us at (615) 987-0593.\n\nBlue Haven Windows\nBetter Windows. Better Life.\nhttps://bluehavenview.com\n";
+    $htmlBody = '<!doctype html><html><body style="margin:0;background:#f8fafc;font-family:Arial,sans-serif;color:#0f172a;">'
+        . '<div style="max-width:720px;margin:0 auto;padding:28px 16px;">'
+        . '<div style="background:#0f2440;color:#fff;border-radius:18px 18px 0 0;padding:26px 28px;">'
+        . '<div style="display:inline-block;background:#facc15;color:#0f172a;font-weight:700;padding:6px 10px;border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;">Submission Received</div>'
+        . '<h1 style="margin:16px 0 6px;font-size:28px;line-height:1.2;">Thank you for contacting Blue Haven Windows</h1>'
+        . '<p style="margin:0;color:#dbeafe;font-size:16px;line-height:1.6;">Hi ' . h($greeting) . ', we received your submission and look forward to speaking with you soon.</p>'
+        . '</div>'
+        . '<div style="background:#fff;border:1px solid #e2e8f0;border-top:0;border-radius:0 0 18px 18px;padding:26px 28px;">'
+        . '<h2 style="font-size:20px;line-height:1.3;margin:0 0 10px;color:#0f172a;">What happens next?</h2>'
+        . '<p style="font-size:16px;line-height:1.7;margin:0;color:#334155;">A member of our team will review your request and follow up using the contact information you provided.</p>'
+        . '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin-top:22px;">'
+        . '<p style="font-size:15px;line-height:1.6;margin:0;color:#334155;">Need immediate assistance? Reply to this email or call us at <a href="tel:+16159870593" style="color:#1d4ed8;font-weight:700;">(615) 987-0593</a>.</p>'
+        . '</div></div>'
+        . '<p style="font-size:12px;color:#64748b;margin:18px 4px 0;">Blue Haven Windows · Better Windows. Better Life. · <a href="https://bluehavenview.com" style="color:#1d4ed8;">bluehavenview.com</a></p>'
+        . '</div></body></html>';
+
+    $boundary = 'b' . bin2hex(random_bytes(16));
+    $headers = [
+        'MIME-Version: 1.0',
+        'Content-Type: multipart/alternative; boundary="' . $boundary . '"',
+        'From: ' . SITE_NAME . ' <info@bluehavenview.com>',
+        'Reply-To: ' . SITE_NAME . ' <info@bluehavenview.com>',
+    ];
+    $body = '--' . $boundary . "\r\n"
+        . "Content-Type: text/plain; charset=UTF-8\r\n\r\n"
+        . $textBody . "\r\n"
+        . '--' . $boundary . "\r\n"
+        . "Content-Type: text/html; charset=UTF-8\r\n\r\n"
+        . $htmlBody . "\r\n"
+        . '--' . $boundary . "--\r\n";
+
+    return mail($email, mb_encode_mimeheader($subject), $body, implode("\r\n", $headers));
+}
+
 function send_guide_email(string $email, string $firstName): bool
 {
     if ($email === '' || !is_file(GUIDE_FILE)) {
@@ -359,6 +402,10 @@ if ($isGuideRequest) {
     }
 
     respond(true, 'Thank you. Please check your inbox for the free Window Buyer\'s Guide from Blue Haven Windows.');
+}
+
+if ($email !== '' && !send_submission_confirmation($email, $firstName)) {
+    error_log('Submission confirmation email failed for ' . $email);
 }
 
 respond(true, 'Thank you. Your request has been emailed to Stephen at Blue Haven Windows.');
