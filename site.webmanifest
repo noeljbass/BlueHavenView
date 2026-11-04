@@ -1,6 +1,6 @@
 {
     "name": "Blue Haven Windows",
-    "short_name": "Blue Haven Windows",
+    "short_name": "Blue Haven",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#facc15",
-    "background_color": "#facc15",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }

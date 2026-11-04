@@ -1,0 +1,22 @@
+# Server credentials and private configuration
+/.ssh/
+/.bluehaven-crm-config.php
+/.env
+/.env.*
+**/.preview-config.php
+**/.preview-store/
+/data/*
+!/data/.gitignore
+!/data/.htaccess
+!/data/*.example.php
+!/data/consent-receipts/
+/data/consent-receipts/*
+!/data/consent-receipts/.htaccess
+# Deployment/editor backups
+*.bak*
+*.backup*
+*.old
+*.orig
+*.tmp
+*.hermes-upload-*
+*~

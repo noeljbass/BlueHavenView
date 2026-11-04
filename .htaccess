@@ -1,10 +1,38 @@
+# SOP225: forward importer authentication only for its read-only status route.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^consent-status\.php$ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
 # Force a single canonical host/protocol so Google does not see duplicate
 # http://, http://www., and https://www. versions of the same pages.
 RewriteEngine On
 
+# Deny private config and editor/deployment backups, including dated suffixes.
+<FilesMatch "(?i)^\.(bluehaven|ht)">
+    Require all denied
+</FilesMatch>
+<FilesMatch "(?i)\.(bak|backup|old|orig|save|sw[op]|tmp)([._-].*)?$|~$">
+    Require all denied
+</FilesMatch>
+# Reject backup requests even when no exact file exists (MultiViews fallback).
+RewriteRule (^|/)\.(bluehaven|ht) - [F,L,NC]
+RewriteRule \.(bak|backup|old|orig|save|sw[op]|tmp)([._-].*)?$|~$ - [F,L,NC]
+
+
 # Normalize duplicate slashes in crawlable page paths before canonical host checks.
 RewriteCond %{THE_REQUEST} \s/+(.+)//+([^\s?]*) [NC]
 RewriteRule ^ https://bluehavenview.com/%1/%2 [R=301,L,NE]
+
+# Consolidate the duplicate Franklin service-area page into the core
+# window replacement money page (both targeted "window replacement franklin tn").
+RewriteRule ^service-areas/franklin-tn\.html$ https://bluehavenview.com/window-replacement.html [R=301,L]
+
+# Keep the Murfreesboro paid landing page on its extensionless Google Ads URL.
+# THE_REQUEST prevents a loop when Apache MultiViews internally maps the
+# extensionless request back to the physical .html file.
+RewriteCond %{THE_REQUEST} \s/+window-replacement-murfreesboro-tn\.html[\s?] [NC]
+RewriteRule ^window-replacement-murfreesboro-tn\.html$ https://bluehavenview.com/window-replacement-murfreesboro-tn [R=301,L]
 
 # Redirect explicit index.html URLs to their directory canonical URLs.
 RewriteRule ^index\.html$ https://bluehavenview.com/ [R=301,L]
