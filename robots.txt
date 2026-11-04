@@ -1,7 +1,24 @@
+# Public pages and assets are crawlable, including by OAI-SearchBot for ChatGPT Search.
+# The wildcard group also preserves the existing GPTBot crawling policy.
 User-agent: *
-Allow: /
+# Private/runtime folders and non-content endpoints (access control is server-side).
 Disallow: /data/
+Disallow: /.ssh/
+Disallow: /.bluehaven-crm-config.php
+Disallow: /previews/
+Disallow: /scripts/
 Disallow: /contact.php
+Disallow: /contact-config.php
+Disallow: /contact-security.php
+Disallow: /contact-delivery-test.php
+Disallow: /consent-ledger.php
+Disallow: /consent-receipt.php
+Disallow: /consent-status.php
+Disallow: /consent-transport.php
+Disallow: /lead-attribution.php
+Disallow: /mailerlite.php
 Disallow: /WindowsBuyersGuide.pdf
 
+# Leave noindex HTML crawlable so search engines can read its noindex directives.
+# Canonical, indexable pages are listed in the sitemap.
 Sitemap: https://bluehavenview.com/sitemap.xml
