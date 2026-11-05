@@ -24,3 +24,25 @@ preserve those files; do not use a destructive mirror/delete operation against
 the document root. The `.gitignore` protects these exclusions in future work.
 
 This synchronization only reads IONOS files; it makes no hosting changes.
+
+## November 5, 2026 copy deployment
+
+Published updates to `index.html`, `window-replacement.html`,
+`window-installation.html`, and `sitemap.xml` on IONOS before committing
+this repository update. The homepage now introduces the family-owned business
+and directs replacement enquiries to the dedicated Franklin replacement page.
+The replacement page includes residential, home, and whole-house replacement
+guidance; the installation page focuses on process, preparation, and workmanship.
+Page metadata, WebPage structured data, and the three sitemap modification dates
+were updated to match.
+
+All 128 previously mirrored hosted files matched the repository baseline before
+publication. After publication, SHA-256 checks confirmed all 128 hosted files
+matched the updated local repository. Public HTTPS responses for all four
+published files returned HTTP 200 and matched their local bytes. Original copies
+of the four changed hosted files were backed up locally. Private configuration
+and runtime files were preserved.
+
+Validation covered HTML tag nesting, one H1 per page, JSON-LD parsing, internal
+HTML links and fragments, unchanged forms and canonical URLs, and git whitespace
+checks. No form submissions or search ranking measurements were performed.
